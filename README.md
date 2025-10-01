@@ -28,7 +28,6 @@ Antes de ejecutar este proyecto, asegúrate de contar con los siguientes compone
 ###  Configuración del proyecto  
 Ejecuta los siguientes comandos:  
 
-```bash
 # Clonar el repositorio
 git clone https://github.com/Kelvin2518/labLaravelLogin7.git
 
@@ -49,7 +48,7 @@ npm install && npm run dev
 El proyecto utiliza un archivo .env para la configuración de la conexión.
 La base de datos definida es: lablaravellogin7.
 
- Migraciones
+📂 Migraciones
 
 Para crear las tablas necesarias para el login de Laravel (incluyendo users y sessions) se usaron migraciones:
 
@@ -104,7 +103,6 @@ Curso: ING WEB
 
 Instructor: Ing. Irina Fong
 
-📅 Fecha de Ejecución
+Fecha de Ejecución
 
 1 de octubre de 2025
-EOF
