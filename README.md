@@ -62,13 +62,22 @@ b. Problema: Laravel no encontraba la BD.
 c. Solución: Corregir el nombre en .env a lablaravellogin7.
 
 QueryException y Table already exists
+
+
 a. Problema: La tabla sessions no existía y la tabla users ya existía.
+
 b. Solución: Ejecutar
+
 c. php artisan migrate:fresh
 
+
 Esto eliminó todas las tablas y las recreó correctamente.
+
+
 a. Problemas con Git y subida a GitHub
+
 b. Problema: Errores al subir el proyecto (conflicto entre ramas main y master).
+
 c. Solución: Uso de línea de comandos:
 
 git add .
@@ -77,14 +86,18 @@ git push origin master
 
 4️. Puntos de Referencia
 
+
 a. Laravel Official Documentation
 
 b. Laravel UI Documentation
 
 c. Styde.net - Tutoriales de Laravel
 
+
 👨‍💻 Información del Desarrollador
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad Tecnológica de Panamá:
+
+
 Nombre: Kelvin Fernández
 
 Correo: kelvin.fernandez@utp.ac.pa
@@ -94,4 +107,5 @@ Curso: ING WEB
 Instructor: Ing. Irina Fong
 
 Fecha de Ejecución
+
 1 de octubre de 2025
