@@ -56,7 +56,9 @@ php artisan migrate:fresh
 3️. Dificultades y Soluciones
 
 a. Error de conexión a la base de datos
+
 b. Problema: Laravel no encontraba la BD.
+
 c. Solución: Corregir el nombre en .env a lablaravellogin7.
 
 QueryException y Table already exists
@@ -76,14 +78,19 @@ git push origin master
 4️. Puntos de Referencia
 
 a. Laravel Official Documentation
+
 b. Laravel UI Documentation
+
 c. Styde.net - Tutoriales de Laravel
 
 👨‍💻 Información del Desarrollador
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad Tecnológica de Panamá:
 Nombre: Kelvin Fernández
+
 Correo: kelvin.fernandez@utp.ac.pa
+
 Curso: ING WEB
+
 Instructor: Ing. Irina Fong
 
 Fecha de Ejecución
