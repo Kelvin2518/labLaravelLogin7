@@ -51,33 +51,23 @@ La base de datos definida es: lablaravellogin7.
 📂 Migraciones
 
 Para crear las tablas necesarias para el login de Laravel (incluyendo users y sessions) se usaron migraciones:
-
 php artisan migrate:fresh
 
 3️. Dificultades y Soluciones
 
-Error de conexión a la base de datos
-
-Problema: Laravel no encontraba la BD.
-
-Solución: Corregir el nombre en .env a lablaravellogin7.
+a. Error de conexión a la base de datos
+b. Problema: Laravel no encontraba la BD.
+c. Solución: Corregir el nombre en .env a lablaravellogin7.
 
 QueryException y Table already exists
-
-Problema: La tabla sessions no existía y la tabla users ya existía.
-
-Solución: Ejecutar
-
-php artisan migrate:fresh
-
+a. Problema: La tabla sessions no existía y la tabla users ya existía.
+b. Solución: Ejecutar
+c. php artisan migrate:fresh
 
 Esto eliminó todas las tablas y las recreó correctamente.
-
-Problemas con Git y subida a GitHub
-
-Problema: Errores al subir el proyecto (conflicto entre ramas main y master).
-
-Solución: Uso de línea de comandos:
+a. Problemas con Git y subida a GitHub
+b. Problema: Errores al subir el proyecto (conflicto entre ramas main y master).
+c. Solución: Uso de línea de comandos:
 
 git add .
 git commit -m "Primer commit"
@@ -85,24 +75,16 @@ git push origin master
 
 4️. Puntos de Referencia
 
-Laravel Official Documentation
-
-Laravel UI Documentation
-
-Styde.net - Tutoriales de Laravel
+a. Laravel Official Documentation
+b. Laravel UI Documentation
+c. Styde.net - Tutoriales de Laravel
 
 👨‍💻 Información del Desarrollador
-
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad Tecnológica de Panamá:
-
 Nombre: Kelvin Fernández
-
 Correo: kelvin.fernandez@utp.ac.pa
-
 Curso: ING WEB
-
 Instructor: Ing. Irina Fong
 
 Fecha de Ejecución
-
 1 de octubre de 2025
