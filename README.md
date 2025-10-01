@@ -6,7 +6,7 @@ Este proyecto es la culminación del curso **Desarrollo VII (PHP)**, impartido p
 
 El laboratorio consiste en la implementación de un módulo de inicio de sesión (**login**) en el framework **Laravel**, siguiendo la arquitectura de diseño **Modelo-Vista-Controlador (MVC)**.  
 
-### 🛠️ Arquitectura MVC
+###  Arquitectura MVC
 - **Modelos** → Se encargan de la interacción con la base de datos para manejar la lógica de negocio.  
 - **Vistas** → Definen la interfaz de usuario, como las páginas HTML.  
 - **Controladores** → Actúan como intermediarios, procesando las solicitudes de los usuarios y devolviendo las respuestas adecuadas.  
@@ -14,7 +14,7 @@ El laboratorio consiste en la implementación de un módulo de inicio de sesión
 
 ---
 
-## 1️⃣ Prerrequisitos e Instalación  
+## 1️. Prerrequisitos e Instalación  
 
 Antes de ejecutar este proyecto, asegúrate de contar con los siguientes componentes:  
 
@@ -25,7 +25,7 @@ Antes de ejecutar este proyecto, asegúrate de contar con los siguientes compone
 - **Editor de Código**: Visual Studio Code (recomendado)  
 - **Entorno Local**: XAMPP, WampServer o Laragon  
 
-### 🚀 Configuración del proyecto  
+###  Configuración del proyecto  
 Ejecuta los siguientes comandos:  
 
 ```bash
@@ -44,18 +44,18 @@ php artisan ui bootstrap --auth
 # Instalar dependencias de NPM y compilar
 npm install && npm run dev
 
-2️⃣ Base de Datos
+2️. Base de Datos
 
 El proyecto utiliza un archivo .env para la configuración de la conexión.
 La base de datos definida es: lablaravellogin7.
 
-📂 Migraciones
+ Migraciones
 
 Para crear las tablas necesarias para el login de Laravel (incluyendo users y sessions) se usaron migraciones:
 
 php artisan migrate:fresh
 
-3️⃣ Dificultades y Soluciones
+3️. Dificultades y Soluciones
 
 Error de conexión a la base de datos
 
@@ -84,7 +84,7 @@ git add .
 git commit -m "Primer commit"
 git push origin master
 
-4️⃣ Puntos de Referencia
+4️. Puntos de Referencia
 
 Laravel Official Documentation
 
@@ -96,11 +96,11 @@ Styde.net - Tutoriales de Laravel
 
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad Tecnológica de Panamá:
 
-Nombre: [Tu nombre aquí]
+Nombre: Kelvin Fernández
 
-Correo: [Tu correo aquí]
+Correo: kelvin.fernandez@utp.ac.pa
 
-Curso: [Tu curso aquí]
+Curso: ING WEB
 
 Instructor: Ing. Irina Fong
 
