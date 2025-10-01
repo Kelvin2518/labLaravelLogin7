@@ -1,61 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+cat << 'EOF' > README.md
+# 📌 CMDB System  
+## Sistema de Gestión de Activos y Configuración  
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto es la culminación del curso **Desarrollo VII (PHP)**, impartido por la **Profesora Irina Fong** en la **Universidad Tecnológica de Panamá**.  
 
-## About Laravel
+El laboratorio consiste en la implementación de un módulo de inicio de sesión (**login**) en el framework **Laravel**, siguiendo la arquitectura de diseño **Modelo-Vista-Controlador (MVC)**.  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 🛠️ Arquitectura MVC
+- **Modelos** → Se encargan de la interacción con la base de datos para manejar la lógica de negocio.  
+- **Vistas** → Definen la interfaz de usuario, como las páginas HTML.  
+- **Controladores** → Actúan como intermediarios, procesando las solicitudes de los usuarios y devolviendo las respuestas adecuadas.  
+- **Rutas** → Definen las URLs que se utilizan para acceder a las diferentes partes de la aplicación.  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 1️⃣ Prerrequisitos e Instalación  
 
-## Learning Laravel
+Antes de ejecutar este proyecto, asegúrate de contar con los siguientes componentes:  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Servidor Web**: Apache o Nginx  
+- **PHP**: Versión 8.1 o superior  
+- **Base de Datos**: MySQL o MariaDB  
+- **Composer**: Para la gestión de dependencias de PHP  
+- **Editor de Código**: Visual Studio Code (recomendado)  
+- **Entorno Local**: XAMPP, WampServer o Laragon  
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🚀 Configuración del proyecto  
+Ejecuta los siguientes comandos:  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+# Clonar el repositorio
+git clone https://github.com/Kelvin2518/labLaravelLogin7.git
 
-## Laravel Sponsors
+# Instalar dependencias PHP
+composer install
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# Instalar paquete de autenticación
+composer require laravel/ui 
 
-### Premium Partners
+# Generar el andamiaje de autenticación
+php artisan ui bootstrap --auth 
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+# Instalar dependencias de NPM y compilar
+npm install && npm run dev
 
-## Contributing
+2️⃣ Base de Datos
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+El proyecto utiliza un archivo .env para la configuración de la conexión.
+La base de datos definida es: lablaravellogin7.
 
-## Code of Conduct
+📂 Migraciones
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Para crear las tablas necesarias para el login de Laravel (incluyendo users y sessions) se usaron migraciones:
 
-## Security Vulnerabilities
+php artisan migrate:fresh
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3️⃣ Dificultades y Soluciones
 
-## License
+Error de conexión a la base de datos
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Problema: Laravel no encontraba la BD.
+
+Solución: Corregir el nombre en .env a lablaravellogin7.
+
+QueryException y Table already exists
+
+Problema: La tabla sessions no existía y la tabla users ya existía.
+
+Solución: Ejecutar
+
+php artisan migrate:fresh
+
+
+Esto eliminó todas las tablas y las recreó correctamente.
+
+Problemas con Git y subida a GitHub
+
+Problema: Errores al subir el proyecto (conflicto entre ramas main y master).
+
+Solución: Uso de línea de comandos:
+
+git add .
+git commit -m "Primer commit"
+git push origin master
+
+4️⃣ Puntos de Referencia
+
+Laravel Official Documentation
+
+Laravel UI Documentation
+
+Styde.net - Tutoriales de Laravel
+
+👨‍💻 Información del Desarrollador
+
+Este laboratorio ha sido desarrollado por el estudiante de la Universidad Tecnológica de Panamá:
+
+Nombre: [Tu nombre aquí]
+
+Correo: [Tu correo aquí]
+
+Curso: [Tu curso aquí]
+
+Instructor: Ing. Irina Fong
+
+📅 Fecha de Ejecución
+
+1 de octubre de 2025
+EOF
